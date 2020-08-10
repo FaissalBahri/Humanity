@@ -1,0 +1,217 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+header{
+    display: flex;
+    width: 100%;
+    min-height: 90px;
+    justify-content: center;
+    color: coral;
+}
+
+.logo{
+    width: 10%;
+    height: 90px;
+} 
+
+#menu ul{
+    display: flex;
+    list-style: none;
+
+}
+
+#menu ul li{
+    display: flex;
+    padding: 8px;
+
+}
+
+.image-top{
+    background-image: url(/Projet/humanity/img/Analphabétisme.jpg);
+    background-position: top center;
+    background-size: 973px;
+    display: flex;
+    justify-content: center;
+    width: 98%;
+    height: 450px;
+    margin: 15px;
+}
+
+.image-top h3{
+    font-size: 4rem;
+    color: cornsilk;
+}
+
+#comprendre{
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: auto;
+    width: 80%;
+    height: 200px;
+}
+
+#comprendre h3{
+    color: coral;
+    font-size: 25px;
+}
+
+#agir{
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: auto;
+    width: 80%;
+    height: 200px;
+}
+
+#agir h3{
+    color: coral;
+    font-size: 25px;
+}
+
+
+@media screen and (max-width: 1024px)
+{
+
+    header{
+        display: flex;
+        width: 100%;
+        min-height: 90px;
+        justify-content: center;
+        color: coral;
+    } 
+    
+    .logo{
+        width: 10%;
+        height: 90px;
+    } 
+    
+    #menu ul{
+        display: none;
+    }
+    
+    #menu ul li{
+        display: none;
+    }
+    
+    .image-top{
+        background-image: url(/Projet/humanity/img/Analphabétisme.jpg);
+        background-position: top center;
+        background-size: 890px;
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        height: 450px;
+        margin: 10px;
+    }
+    
+    .image-top h3{
+        font-size: 3rem;
+        color: cornsilk;
+    }
+    
+    #comprendre{
+        text-align: center;
+        display: block;
+        margin: auto;
+        padding: auto;
+        width: 80%;
+        height: 200px;
+    }
+
+    #comprendre h3{
+        color: coral;
+        font-size: 25px;
+    }
+    
+    #agir{
+        text-align: center;
+        display: block;
+        margin: auto;
+        padding: auto;
+        width: 80%;
+        height: 200px;
+    }
+
+    #agir h3{
+        color: coral;
+        font-size: 25px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 600px)
+{
+    header{
+        display: flex;
+        width: 100%;
+        min-height: 90px;
+        justify-content: center;
+        color: coral;
+    } 
+    
+    .logo{
+        width: 10%;
+        height: 90px;
+    } 
+    
+    #menu ul{
+        display: none;
+    }
+    
+    #menu ul li{
+        display: none;
+    }
+    
+    .image-top{
+        background-image: url(/Projet/humanity/img/Analphabétisme.jpg);
+        background-position: top center;
+        background-size: 890px;
+        display: flex;
+        justify-content: center;
+        width: 95%;
+        height: 450px;
+        margin: 10px;
+    }
+    
+    .image-top h3{
+        font-size: 2rem;
+        color: cornsilk;
+    }
+    
+    #comprendre{
+        text-align: center;
+        display: block;
+        margin: auto;
+        padding: auto;
+        width: 80%;
+        height: 200px;
+    }
+
+    #comprendre h3{
+        color: coral;
+        font-size: 25px;
+    }
+    
+    #agir{
+        text-align: center;
+        display: block;
+        margin: auto;
+        padding: auto;
+        width: 80%;
+        height: 200px;
+    }
+
+    #agir h3{
+        color: coral;
+        font-size: 25px;
+    }
+    
+
+}
