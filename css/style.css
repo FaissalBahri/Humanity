@@ -1,4 +1,4 @@
-* {
+body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -186,7 +186,7 @@ img {
 /* END HEADER SECTION */
 /* HERO SECTION */
 #hero {
-    background-image: url(/img/hero.jpg);
+    background-image: url(../img/hero.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -287,10 +287,10 @@ img {
     z-index: -1;
 }
 /* ACTIONS IMAGES */
-#actions .water {background-image: url(/img/eau.jpg);}
-#actions .food{background-image: url(/img/alimentation.jpg);}
-#actions .education {background-image: url(/img/education.jpg);}
-#actions .health {background-image: url(/img/health.jpg);}
+#actions .water {background-image: url(../img/eau.jpg);}
+#actions .food{background-image: url(../img/alimentation.jpg);}
+#actions .education {background-image: url(../img/education.jpg);}
+#actions .health {background-image: url(../img/health.jpg);}
 /* END ACTIONS IMAGES */
 #actions .action-bottom .icon {
     height: 80px;
