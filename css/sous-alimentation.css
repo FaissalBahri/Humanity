@@ -2,81 +2,298 @@ body{
     padding: 0;
     margin: 0;
 }
-
-
-header{
+/* -------------- Mobile First-------------- */
+/* header{
     display: flex;
     width: 100%;
     min-height: 90px;
     justify-content: center;
-    color: rgb(255, 108, 55);
-}
+    color: coral;
+}  */
 
-.logo{
-    width: 10%;
-    height: 90px;
-} 
-
-#menu ul{
-    display: flex;
-    list-style: none;
-
-}
-
-#menu ul li{
-    display: flex;
-    padding: 8px;
-
-}
-
-.image-top{
-    background-image: url(/Projet/humanity/img/alimentation.jpg);
-    background-position: top center;
-    background-size: 973px;
+.container {
     display: flex;
     justify-content: center;
-    width: 98%;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+/* img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}  */
+.action-tittle {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #009FC8;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.button-hero {
+    display: inline-block;
+    padding: 10px 30px;
+    color: black;
+    background-color: transparent;
+    border: 2px solid red;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition-property: background-color, color;
+}
+.button-hero:hover {
+    color: black;
+    background-color: red;
+}
+/* NAVIGATION HEADER SECTION */
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+#header .logo {
+    width: 70px;
+}
+#logo-img{
+    width: 160%;
+    height: 30%;
+}
+#header .header {
+    min-height: 8vh;
+    background-color:rgba(31, 30, 30, 0.24);
+}
+#header .nav-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+#header .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    background-color: rgb(31,30,30);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    z-index: 1;
+    overflow-x: hidden;
+}
+#header .menu ul.active {
+    left: 0;
+}
+#header .menu ul a {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;    
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;    
+}
+
+#header .menu ul a::after {
+    content: attr(data-after);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    -webkit-transform: translate(-50%, -50%) scale(0);
+    -moz-transform: translate(-50%, -50%) scale(0);
+    -ms-transform: translate(-50%, -50%) scale(0);
+    -o-transform: translate(-50%, -50%) scale(0);
+    color: rgba(240,248,255, 0.021);
+    font-size: 2rem;
+    
+    letter-spacing: 50px;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+    -webkit-transition: .3s ease letter-spacing;
+    -moz-transition: .3s ease letter-spacing;
+    -ms-transition: .3s ease letter-spacing;
+    -o-transition: .3s ease letter-spacing;
+}  
+#header .menu ul li:hover a::after {
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -moz-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    -o-transform: translate(-50%, -50%) scale(1);
+    letter-spacing: initial;
+} 
+#burger{
+    position: fixed;
+    right: 20px;
+    width: 20px;
+    height: 25px;
+    z-index: 1;
+    background: linear-gradient(#FFF,#DDD);
+    border: #AAA 1px solid;
+    border-radius: 2px;
+    padding: 2px 5px;
+    cursor: pointer;
+    transition: border 0.3s linear 0s;
+}
+#burger:hover{
+    border: #06F 1px solid;
+}
+#burger:hover div{
+    background: #06F;
+}
+#burger > div{
+    width: 20px;
+    height: 4px;
+    background: #333;
+    margin: 3px 0px;
+    border-radius: 4px;
+    transition: background 0.3s linear 0s;
+}
+#hidden{
+    position: fixed;
+    right: -300px;
+    top: 60px;
+    width: 260px;
+    background: rgb(226, 223, 223);
+    color:#ededed;
+    padding:15px;
+    transition: right 0.3s linear 0s;
+}
+.open {
+    right: 0px !important;
+}
+nav ul {
+    list-style: none;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+nav ul li:hover {
+    color: black
+}
+nav ul li:hover ~ .hidden {
+    background: whitesmoke;
+}
+
+/* END HEADER SECTION */
+.image-top{
+    background-image: url(../img/alimentation02.jpg);
+    background-position: top center;
+    background-size: 700px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     height: 450px;
-    margin: 15px;
+    margin-top: 110px;
 }
 
 .image-top h3{
-    font-size: 4rem;
-    color: rgb(255, 226, 109);
+    font-size: 2rem;
+    color: cornsilk;
 }
-
-.comprendre{
+.texte .comprendre{
     text-align: center;
     display: block;
     margin: auto;
     padding: auto;
     width: 80%;
-    height: 200px;
-}
+    height: 350px;
+} 
+
+
 .comprendre h3{
     color: coral;
     font-size: 25px;
 }
 
-.agir{
+.texte .agir{
     text-align: center;
     display: block;
     margin: auto;
     padding: auto;
     width: 80%;
-    height: 200px;
+    height: 300px;
+
 }
+
 .agir h3{
     color: coral;
     font-size: 25px;
 }
+/* FOOTER */
+
+footer{
+    height: 20vh;
+}
+#foot {
+    background-image: linear-gradient(60deg, #29323c 0%,#485563 100%);
+}
+#foot .footer {
+    min-height: 120px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+#foot h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+#foot h1 span {
+    color: #009FC8;
+}
+#foot h2 {
+    color: #F7941E ;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+#foot p {
+    color: white;
+    font-size: 1.3rem;
+}
+/* END FOOTER */
 
 
+/* -------------- FIN MOBILE FIRST-------------- */
 
 
+/* -------FORMAT TABLETTE---------  */
 
-
-@media screen and (max-width: 1024px)
+@media screen and (min-width:768px)
 {
 
     header{
@@ -101,119 +318,226 @@ header{
     }
     
     .image-top{
-        background-image: url(/Projet/humanity/img/alimentation.jpg);
+        background-image: url(../img/alimentation02.jpg);
         background-position: top center;
-        background-size: 750px;
+        background-size: 782px;
         display: flex;
         justify-content: center;
         width: 95%;
         height: 450px;
         margin: 10px;
-    }
-    
+    } 
+
     .image-top h3{
         font-size: 3rem;
-        color: rgb(255, 226, 109);
+        color: cornsilk;
     }
     
-    #comprendre{
+    .texte .comprendre{
         text-align: center;
         display: block;
         margin: auto;
         padding: auto;
         width: 80%;
-        height: 200px;
+        height: 350px;
     }
 
-    #comprendre h3{
+    .comprendre h3{
         color: coral;
         font-size: 25px;
     }
     
-    #agir{
+    .texte .agir{
         text-align: center;
         display: block;
         margin: auto;
         padding: auto;
         width: 80%;
-        height: 200px;
+        height: 300px;
     }
 
-    #agir h3{
+    .agir h3{
         color: coral;
         font-size: 25px;
     }
+
+        /* FOOTER */
+        #foot {
+            background-image: linear-gradient(60deg, #29323c 0%,#485563 100%);
+        }
+        #foot .footer {
+            min-height: 120px;
+            flex-direction: column;
+            padding-top: 50px;
+            padding-bottom: 10px;
+        }
+        #foot h1 {
+            color: white;
+            text-transform: uppercase;
+            font-size: 3rem;
+        }
+        #foot h1 span {
+            color: #009FC8;
+        }
+        #foot h2 {
+            color: #F7941E ;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: .1rem;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        #foot p {
+            color: white;
+            font-size: 1.3rem;
+        }
+        /* END FOOTER */
 
 }
 
+/* -------------- FIN FORMAT TABLETTE-------------- */
 
 
-@media screen and (max-width: 600px)
-{
-    header{
+
+
+
+
+
+
+
+
+
+/* MEDIAS QUERIES / DESKTOP */
+@media only screen and (min-width:1200px){
+    /* header{
         display: flex;
         width: 100%;
         min-height: 90px;
         justify-content: center;
         color: coral;
-    } 
-    
+    } */
+    #header .burger {
+        display: none;
+    }
+    #header .nav-menu ul {
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-menu ul li {
+        display: inline-block;
+    }
+    #header .nav-menu ul li a{
+        font-size: 1.5rem;
+        color: white;
+        
+    }
+    #header .nav-menu ul li a:hover {
+        color: #F7941E;
+    }
+    #header .nav-menu ul li a::after {
+        display: none;
+    }
     .logo{
         width: 10%;
         height: 90px;
     } 
+
+    #logo{
+        width: 150%;
+        height: 90px;
+    } 
     
     #menu ul{
-        display: none;
+        display: flex;
+        list-style: none;
+    
     }
     
     #menu ul li{
-        display: none;
+        display: flex;
+        padding: 8px;
+    
     }
     
     .image-top{
-        background-image: url(/Projet/humanity/img/alimentation.jpg);
-        background-position: top center;
-        background-size: 670px;
+        background-image:url(../img/alimentation02.jpg);
+        background-position: left center;
+        background-size: 1400px;
         display: flex;
         justify-content: center;
-        width: 95%;
+        width: 98%;
         height: 450px;
-        margin: 10px;
+        margin: 15px;
     }
     
     .image-top h3{
-        font-size: 2rem;
-        color: rgb(255, 226, 109);
+        font-size: 4rem;
+        color: rgba(255, 255, 255, 0.911);
     }
     
-    #comprendre{
+    .comprendre{
+        text-align: center;
+        display: block;
+        margin: auto;
+        padding: auto;
+        width: 80%;
+        height: 340px;
+    }
+    .comprendre h3{
+        color: coral;
+        font-size: 25px;
+    }
+    
+    .agir{
         text-align: center;
         display: block;
         margin: auto;
         padding: auto;
         width: 80%;
         height: 200px;
-    }
 
-    #comprendre h3{
+    }
+    .agir h3{
         color: coral;
         font-size: 25px;
     }
-    
-    #agir{
+
+        /* FOOTER */
+    #foot {
+        background-image: linear-gradient(60deg, #29323c 0%,#485563 100%);
+    }
+    #foot .footer {
+        min-height: 120px;
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+    #foot h1 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+    #foot h1 span {
+        color: #009FC8;
+    }
+    #foot h2 {
+        color: #F7941E ;
         text-align: center;
-        display: block;
-        margin: auto;
-        padding: auto;
-        width: 80%;
-        height: 200px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        letter-spacing: .1rem;
+        margin-top: 10px;
+        margin-bottom: 30px;
     }
-
-    #agir h3{
-        color: coral;
-        font-size: 25px;
+    #foot p {
+        color: white;
+        font-size: 1.3rem;
     }
-    
+    /* END FOOTER */
 
 }
+    /* -------------- FIN FORMAT GRAND ECRAN-------------- */

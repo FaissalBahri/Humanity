@@ -1,7 +1,11 @@
-// const burger = document.querySelector('.header .nav-menu .menu .burger ');
-// const smartMenu = document.querySelector('.header .nav-menu .menu ul');
-// const header = document.querySelector('.header.container');
+            
+            var main =document.querySelector('main')
+            var burger = document.getElementsByClassName('burger');
+            var menu = document.getElementById('hidden');
 
-// burger.addEventListener('click',() => {
-//     burger.classList.toggle('active');
-// });
+            burger.addEventListener('click',function() {
+                 menu.classList.add('open');
+            })
+            main.addEventListener('click',function(){
+                menu.classList.remove('open');
+            })
