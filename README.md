@@ -6,3 +6,4 @@ git clone https://github.com/FaissalBahri/Humanity.git
 
 cd Humanity
 
+Ouvrir le fichier index.html
